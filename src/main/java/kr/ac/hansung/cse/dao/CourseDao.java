@@ -85,7 +85,7 @@ public class CourseDao {
         String professor = course.getProfessor();
         int credit = course.getCredit();
 
-        String sqlStatement= "insert into courses (year, semester, courseName, courseCode, classification, professor, credit) values (?,?,?)";
+        String sqlStatement= "insert into courses (year, semester, courseName, courseCode, classification, professor, credit) values (?,?,?,?,?,?,?)";
 
         return (jdbcTemplate.update(sqlStatement, new Object[] {year, semester, courseName, courseCode, classification, professor, credit}) == 1);
     }

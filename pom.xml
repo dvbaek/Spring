@@ -49,12 +49,13 @@
 <!--            <artifactId>spring-security-config</artifactId>-->
 <!--            <version>${org.spring.security-version}</version>-->
 <!--        </dependency>-->
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.hibernate.validator</groupId>-->
-<!--            <artifactId>hibernate-validator</artifactId>-->
-<!--            <version>6.2.0.Final</version>-->
-<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.2.0.Final</version>
+        </dependency>
 
 <!--        <dependency>-->
 <!--            <groupId>org.springframework</groupId>-->
