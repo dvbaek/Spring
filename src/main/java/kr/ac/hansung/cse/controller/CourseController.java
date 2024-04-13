@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -69,5 +70,20 @@ public class CourseController {
         model.addAttribute("courses", courses);
 
         return "registeredCourses";
+    }
+
+    @GetMapping("/details")
+    public String showDetails(@RequestParam("year") String year,
+                              @RequestParam("semester") String semester,
+                              Model model) {
+        // 해당하는 년도와 학기의 데이터를 조회
+        List<Course> courses = courseService.getCoursesByYearAndSemester(year, semester);
+
+        // 조회된 데이터를 모델에 담아서 뷰로 전달
+        model.addAttribute("year", year);
+        model.addAttribute("semester", semester);
+        model.addAttribute("courses", courses);
+
+        return "details";
     }
 }

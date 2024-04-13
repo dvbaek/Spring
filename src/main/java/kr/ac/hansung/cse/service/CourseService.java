@@ -30,4 +30,8 @@ public class CourseService {
     public List<Course> getNextSemesterCourses() {
         return courseDao.getNextSemesterCourses(2024, 2);
     }
+
+    public List<Course> getCoursesByYearAndSemester(String year, String semester){
+        return courseDao.getCoursesByYearAndSemester(year, semester);
+    }
 }

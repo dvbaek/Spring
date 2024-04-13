@@ -150,4 +150,9 @@ public class CourseDao {
             return course;
         }
     }
+
+    public List<Course> getCoursesByYearAndSemester(String year, String semester) {
+        String sql = "SELECT * FROM courses WHERE year = ? AND semester = ?";
+        return jdbcTemplate.query(sql, new Object[]{year, semester}, new CourseRowMapper());
+    }
 }

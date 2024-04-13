@@ -54,7 +54,7 @@
                 <td> <c:out value="${earnedCredit[0]}"/> </td>
                 <td> <c:out value="${earnedCredit[1]}"/> </td>
                 <td> <c:out value="${earnedCredit[2]}"/> </td>
-                <td> <a href="details?year=${record[0]}&semester=${record[1]}">상세보기</a> </td>
+                <td> <a href="details?year=${earnedCredit[0]}&semester=${earnedCredit[1]}">상세보기</a> </td>
             </tr>
         </c:forEach>
         </tbody>
