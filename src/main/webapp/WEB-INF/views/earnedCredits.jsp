@@ -15,30 +15,6 @@
 <body>
 <div class="container">
     <h2>Courses</h2>
-<%--            <table class="table table-bordered table-striped">--%>
-<%--                <thead class="thead-dark">--%>
-<%--                <tr>--%>
-<%--                    <th>년도</th>--%>
-<%--                    <th>학기</th>--%>
-<%--                    <th>교과목명</th>--%>
-<%--                    <th>교과구분</th>--%>
-<%--                    <th>담당교수</th>--%>
-<%--                    <th>학점</th>--%>
-<%--                </tr>--%>
-<%--                </thead>--%>
-<%--                <tbody>--%>
-<%--                <c:forEach var="course" items="${id_courses}" >--%>
-<%--                    <tr>--%>
-<%--                        <td> <c:out value="${course.year}"/> </td>--%>
-<%--                        <td> <c:out value="${course.semester}"/> </td>--%>
-<%--                        <td> <c:out value="${course.courseName}"/> </td>--%>
-<%--                        <td> <c:out value="${course.classification}"/> </td>--%>
-<%--                        <td> <c:out value="${course.professor}"/> </td>--%>
-<%--                        <td> <c:out value="${course.credit}"/> </td>--%>
-<%--                    </tr>--%>
-<%--                </c:forEach>--%>
-<%--                </tbody>--%>
-<%--            </table>--%>
     <table class="table table-bordered table-striped">
         <thead class="thead-dark">
         <tr>

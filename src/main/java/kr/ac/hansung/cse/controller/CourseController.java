@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class CourseController {
@@ -28,12 +29,28 @@ public class CourseController {
 //        return  "earnedCredits";
 //    }
 
+//    @GetMapping("/earnedCredits")
+//    public String showEarnedCredits(Model model) {
+//        List<Object[]> earnedCredits = courseService.getEarnedCreditsByYearAndSemester();
+//        model.addAttribute("earnedCredits", earnedCredits);
+//        int totalCredits = courseService.getTotalCredits();
+//        model.addAttribute("totalCredits", totalCredits);
+//        return "earnedCredits";
+//    }
+
     @GetMapping("/earnedCredits")
     public String showEarnedCredits(Model model) {
-        List<Object[]> earnedCredits = courseService.getEarnedCreditsByYearAndSemester();
-        model.addAttribute("earnedCredits", earnedCredits);
+        List<Object[]> allEarnedCredits = courseService.getEarnedCreditsByYearAndSemester();
+
+        List<Object[]> filteredEarnedCredits = allEarnedCredits.stream()
+                .filter(credit -> !credit[0].equals(2024) || !credit[1].equals(2))
+                .collect(Collectors.toList());
+
+        model.addAttribute("earnedCredits", filteredEarnedCredits);
+
         int totalCredits = courseService.getTotalCredits();
         model.addAttribute("totalCredits", totalCredits);
+
         return "earnedCredits";
     }
 

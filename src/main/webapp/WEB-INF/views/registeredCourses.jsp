@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container">
-    <h2>2024년 2학기 Courses</h2>
+    <h2>수강신청조회</h2>
     <table class="table table-bordered table-striped">
         <thead class="thead-dark">
         <tr>
@@ -32,7 +32,7 @@
                 <td> <c:out value="${course.year}"/> </td>
                 <td> <c:out value="${course.semester}"/> </td>
                 <td> <c:out value="${course.courseName}"/> </td>
-                <td> <c:out value="${course.courseCode}}"/> </td>
+                <td> <c:out value="${course.courseCode}"/> </td>
                 <td> <c:out value="${course.professor}"/> </td>
                 <td> <c:out value="${course.credit}"/> </td>
             </tr>

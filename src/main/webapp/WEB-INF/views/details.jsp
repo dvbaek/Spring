@@ -32,7 +32,7 @@
                     <td> <c:out value="${course.year}"/> </td>
                     <td> <c:out value="${course.semester}"/> </td>
                     <td> <c:out value="${course.courseName}"/> </td>
-                    <td> <c:out value="${course.courseCode}}"/> </td>
+                    <td> <c:out value="${course.courseCode}"/> </td>
                     <td> <c:out value="${course.professor}"/> </td>
                     <td> <c:out value="${course.credit}"/> </td>
                 </tr>
