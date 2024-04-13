@@ -130,4 +130,24 @@ public class CourseDao {
         String sqlStatement = "SELECT SUM(credit) FROM courses";
         return jdbcTemplate.queryForObject(sqlStatement, Integer.class);
     }
+
+    public List<Course> getNextSemesterCourses(int year, int semester) {
+        String sql = "SELECT * FROM courses WHERE year = ? AND semester = ?";
+        return jdbcTemplate.query(sql, new Object[] { year, semester }, new CourseRowMapper());
+    }
+
+    private static class CourseRowMapper implements RowMapper<Course> {
+        @Override
+        public Course mapRow(ResultSet rs, int rowNum) throws SQLException {
+            Course course = new Course();
+            course.setYear(rs.getInt("year"));
+            course.setSemester(rs.getInt("semester"));
+            course.setCourseName(rs.getString("courseName"));
+            course.setCourseCode(rs.getString("courseCode"));
+            course.setClassification(rs.getString("classification"));
+            course.setProfessor(rs.getString("professor"));
+            course.setCredit(rs.getInt("credit"));
+            return course;
+        }
+    }
 }

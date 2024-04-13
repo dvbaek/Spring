@@ -23,15 +23,12 @@
             <span class="fs-4">학사 정보 시스템</span>
         </a>
 
-        <%--    <a href="./home.jsp" class="d-flex align-items-center text-dark text-decoration-none">--%>
-        <%--      <button type="button" class="btn btn-secondary">Login</button>--%>
-        <%--    </a>--%>
         <c:if test="${pageContext.request.userPrincipal.name != null}">
-            <a href="javascript:document.getElementById('logout').submit()">Logout</a>
+            <form id="logout" action="<c:url value="/logout" />" method="post">
+                <button type="submit" class="btn btn-secondary">Logout</button>
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+            </form>
         </c:if>
-        <form id="logout" action="<c:url value="/logout" />" method="post">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-        </form>
     </header>
 </div>
 <div class="row align-items-md-stretch   text-center">

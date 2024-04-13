@@ -25,5 +25,9 @@ public class CourseService {
         return courseDao.getTotalCredits();
     }
 
-    public void insert(Course course) { courseDao.insert(course); };
+    public void insert(Course course) { courseDao.insert(course); }
+
+    public List<Course> getNextSemesterCourses() {
+        return courseDao.getNextSemesterCourses(2024, 2);
+    }
 }

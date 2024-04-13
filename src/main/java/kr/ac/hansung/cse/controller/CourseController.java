@@ -62,4 +62,12 @@ public class CourseController {
         courseService.insert(course);
         return "afterRegister";
     }
+
+    @GetMapping("/registeredCourses")
+    public String showRegisteredCourses(Model model) {
+        List<Course> courses = courseService.getNextSemesterCourses();
+        model.addAttribute("courses", courses);
+
+        return "registeredCourses";
+    }
 }
