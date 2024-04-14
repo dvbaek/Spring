@@ -25,6 +25,10 @@ public class CourseService {
         return courseDao.getTotalCredits();
     }
 
+    public int getTotalCreditsExcluding20242() {
+        return courseDao.getTotalCreditsExcluding20242();
+    }
+
     public void insert(Course course) { courseDao.insert(course); }
 
     public List<Course> getNextSemesterCourses() {

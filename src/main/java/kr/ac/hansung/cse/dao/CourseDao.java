@@ -131,6 +131,11 @@ public class CourseDao {
         return jdbcTemplate.queryForObject(sqlStatement, Integer.class);
     }
 
+    public int getTotalCreditsExcluding20242() {
+        String sqlStatement = "SELECT SUM(credit) FROM courses WHERE year != 2024 OR semester != 2";
+        return jdbcTemplate.queryForObject(sqlStatement, Integer.class);
+    }
+
     public List<Course> getNextSemesterCourses(int year, int semester) {
         String sql = "SELECT * FROM courses WHERE year = ? AND semester = ?";
         return jdbcTemplate.query(sql, new Object[] { year, semester }, new CourseRowMapper());

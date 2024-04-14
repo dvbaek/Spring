@@ -32,21 +32,11 @@
                     <td> <c:out value="${course.year}"/> </td>
                     <td> <c:out value="${course.semester}"/> </td>
                     <td> <c:out value="${course.courseName}"/> </td>
-                    <td> <c:out value="${course.courseCode}"/> </td>
+                    <td> <c:out value="${course.classification}"/> </td>
                     <td> <c:out value="${course.professor}"/> </td>
                     <td> <c:out value="${course.credit}"/> </td>
                 </tr>
             </c:forEach>
-            <%--        <c:forEach var="course" items="${courses}" >--%>
-            <%--            <tr>--%>
-            <%--                <td> <c:out value="${course[0]}"/> </td>--%>
-            <%--                <td> <c:out value="${course[1]}"/> </td>--%>
-            <%--                <td> <c:out value="${course[2]}"/> </td>--%>
-            <%--                <td> <c:out value="${course[3]}}"/> </td>--%>
-            <%--                <td> <c:out value="${course[5]}"/> </td>--%>
-            <%--                <td> <c:out value="${course[6]}"/> </td>--%>
-            <%--            </tr>--%>
-            <%--        </c:forEach>--%>
             </tbody>
         </table>
     </div>

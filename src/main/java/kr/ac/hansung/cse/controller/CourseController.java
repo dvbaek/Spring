@@ -29,15 +29,6 @@ public class CourseController {
 //        return  "earnedCredits";
 //    }
 
-//    @GetMapping("/earnedCredits")
-//    public String showEarnedCredits(Model model) {
-//        List<Object[]> earnedCredits = courseService.getEarnedCreditsByYearAndSemester();
-//        model.addAttribute("earnedCredits", earnedCredits);
-//        int totalCredits = courseService.getTotalCredits();
-//        model.addAttribute("totalCredits", totalCredits);
-//        return "earnedCredits";
-//    }
-
     @GetMapping("/earnedCredits")
     public String showEarnedCredits(Model model) {
         List<Object[]> allEarnedCredits = courseService.getEarnedCreditsByYearAndSemester();
@@ -48,7 +39,8 @@ public class CourseController {
 
         model.addAttribute("earnedCredits", filteredEarnedCredits);
 
-        int totalCredits = courseService.getTotalCredits();
+        //int totalCredits = courseService.getTotalCredits();
+        int totalCredits = courseService.getTotalCreditsExcluding20242();
         model.addAttribute("totalCredits", totalCredits);
 
         return "earnedCredits";
