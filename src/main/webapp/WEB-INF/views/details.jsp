@@ -13,6 +13,7 @@
     <title>상세정보</title>
 </head>
 <body>
+    <%@ include file="header.jsp"%>
     <div class="container">
         <h2>${year}년도 ${semester}학기</h2>
         <table class="table table-bordered table-striped">

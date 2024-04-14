@@ -13,6 +13,7 @@
     <title>수강신청하기</title>
 </head>
 <body>
+<%@ include file="header.jsp"%>
 <div class="container py-4 row align-items-md-stretch">
     <sf:form method="post" action="${pageContext.request.contextPath}/doRegister" modelAttribute="course">
         <div class="mb-3 row">

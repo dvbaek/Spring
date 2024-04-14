@@ -13,6 +13,7 @@
     <title>이수학점 조회</title>
 </head>
 <body>
+<%@ include file="header.jsp"%>
 <div class="container">
     <h2>Courses</h2>
     <table class="table table-bordered table-striped">

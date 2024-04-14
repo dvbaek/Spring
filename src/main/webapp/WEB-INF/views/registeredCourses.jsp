@@ -14,6 +14,7 @@
 </head>
 <body>
 <div class="container">
+    <%@ include file="header.jsp"%>
     <h2>수강신청조회</h2>
     <table class="table table-bordered table-striped">
         <thead class="thead-dark">
@@ -37,16 +38,6 @@
                 <td> <c:out value="${course.credit}"/> </td>
             </tr>
         </c:forEach>
-        <%--        <c:forEach var="course" items="${courses}" >--%>
-        <%--            <tr>--%>
-        <%--                <td> <c:out value="${course[0]}"/> </td>--%>
-        <%--                <td> <c:out value="${course[1]}"/> </td>--%>
-        <%--                <td> <c:out value="${course[2]}"/> </td>--%>
-        <%--                <td> <c:out value="${course[3]}}"/> </td>--%>
-        <%--                <td> <c:out value="${course[5]}"/> </td>--%>
-        <%--                <td> <c:out value="${course[6]}"/> </td>--%>
-        <%--            </tr>--%>
-        <%--        </c:forEach>--%>
         </tbody>
     </table>
 </div>

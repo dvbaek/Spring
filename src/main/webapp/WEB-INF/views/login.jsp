@@ -19,6 +19,7 @@
     <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
 </head>
 <body>
+<%@ include file="header.jsp"%>
 <div class="container">
     <!--<form class="form-signin" method="post" action="/helloSpringMVC/login">-->
     <form class="form-signin" method="post" action="<c:url value="/login" />">
